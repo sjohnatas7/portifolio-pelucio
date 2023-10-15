@@ -1,0 +1,36 @@
+/* MÉDIO */
+@media (max-width: 768px) {
+    #subTitulo{
+        font-size: 1.3rem;
+    }
+}
+/* PEQUENO */
+@media (max-width: 576px) {
+    html{
+        font-size: 9pt;
+    }
+    body{
+        grid-template-rows: 13vw auto 30vw;
+    }
+    #logo{
+        max-width: 20%;
+    }
+    #opcoes div{
+    }
+    #opcoes div:nth-child(1), #opcoes div:nth-child(2), #opcoes div:nth-child(3){
+       margin-right: .5em;
+    }
+    #navRedes img{
+        max-width: 4.5vw; 
+     }
+    #navRedes :nth-child(1), #navRedes :nth-child(2){
+        margin-right: .5em;
+    }
+    #resenhaECoisaSeria{
+        margin-top: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .display-md-none{
+        display: none;
+    }
+}
