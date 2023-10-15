@@ -12,49 +12,46 @@
    font-family: "Anonymous-Bold";
    src: url("fonts/AnonymousPro-Bold.ttf");
 }
+
 @font-face {
    font-family: "BebasNeue";
    src: url("fonts/BebasNeue-Regular.ttf");
 }
+
 @font-face {
    font-family: "Athiti";
    src: url("fonts/Athiti-Regular.ttf");
 }
+
 @font-face {
    font-family: "AsapCondensed";
    src: url("fonts/Asap_Condensed-Regular.ttf");
 }
+
 html,
 body {
    margin: 0;
    padding: 0;
    width: 100%;
-   height: 100%;
+   min-height: 100%;
    background: rgb(248, 248, 248);
    font-size: 12pt;
 }
 
-p{
+p {
    font-family: Anonymous;
-}
-body {
-   display: grid;
-   grid-template-areas:
-      "nav"
-      "main"
-      "footer";
 }
 
 #nav {
    grid-area: nav;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
+   position: relative;
 }
 
 #logo {
-   margin-left: -10px;
-   max-width: 10%;
+   max-width: 120px;
 }
 
 #logo:hover {
@@ -65,9 +62,14 @@ body {
    margin: 0;
    padding: 0;
    display: flex;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   transform: translate(-50%, -50%);
 }
 
-#opcoes div {
+#opcoes a {
    font-family: ChelaOne;
    font-size: 1.9rem;
    color: #F7B111;
@@ -91,8 +93,9 @@ body {
    display: flex;
 }
 
-#navRedes img {
-   max-width: 4vw;
+#navRedes a {
+   padding: 0;
+   margin: 0;
 }
 
 #navRedes img:hover {
@@ -100,17 +103,17 @@ body {
    background-color: rgb(250, 200, 85);
 }
 
-#navRedes :nth-child(1),
-#navRedes :nth-child(2) {
-   margin-right: .9rem;
-}
 
-#navRedes i{
+#navRedes i {
    font-size: 35px;
 }
-#navRedes i:hover{
+
+#navRedes i:hover {
    color: #F7B111;
 }
+
+
+
 /* ////////////////////////////////////////// */
 #main {
    grid-area: main;
@@ -131,7 +134,7 @@ body {
    margin-top: 2.5rem;
    margin-bottom: .5rem;
    color: #000;
-   
+
 }
 
 #subTitulo {
@@ -240,12 +243,16 @@ body {
    display: flex;
    position: relative;
 }
+.topicoWho img{
+   max-width: 350px;
+}
 
 .topicoWho:nth-child(2),
 .topicoWho:nth-child(3) {
    display: flex;
    align-items: center;
 }
+
 .pWho {
    font-family: Anonymous;
    font-size: 1.3rem;
@@ -253,6 +260,7 @@ body {
    text-align: justify;
    display: flex;
 }
+
 
 #firstPWho {
    display: flex;
@@ -270,13 +278,16 @@ body {
    top: 0;
    left: -10px;
 }
-#segundoTexto p{
+
+#segundoTexto p {
    position: absolute;
-   top: 140px;
    width: 60%;
 }
+
 #segundoTexto img {
    margin-left: auto;
+   margin-bottom: 1rem;
+   width: 40%;
 }
 
 #terceiroTexto img {
@@ -284,15 +295,13 @@ body {
    position: absolute;
    left: -80px;
 }
+
 #terceiroTexto p {
    width: 60%;
    margin-left: calc(2.5rem + 33%);
    margin-right: 50px;
 }
 
-.topicoWho:nth-child(2) img {
-   width: 40%;
-}
 
 /* 
 #who img{
@@ -300,13 +309,14 @@ body {
 } */
 /*-------------Products-------------------*/
 
-#tituloProdutos{
+#tituloProdutos {
    font-family: ChelaOne;
    color: #000;
    font-size: 4.5rem;
    text-align: center;
    margin-bottom: 30px;
 }
+
 #galeriaProdutos {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -323,19 +333,16 @@ body {
 
 #letsTalk {
    background: #797979;
-   height: 100%;
-   width: 50%;
    display: flex;
    justify-content: center;
    flex-direction: column;
-   padding: 120px;
 }
 
 #contato {
-   height: 100%;
    background: #E4E4E4;
-   width: 50%;
-   padding: 60px;
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #tituloLetsTalk {
@@ -363,13 +370,15 @@ body {
 
 i.fa {
    font-size: 60px;
-   margin: 10px 25px 0;   
    color: #000;
+   margin: 10px;
 }
+
 #letsTalk i:hover {
    color: #f7b111;
 }
-.footerIcones{
+
+.footerIcones {
    display: flex;
    justify-content: center;
 }
@@ -384,40 +393,47 @@ i.fa {
    line-height: normal;
 }
 
-#contato p{
+#contato p {
    text-align: center;
    font-family: Athiti;
 }
 
-.email{
+.email {
    color: #000;
    font-weight: 700;
    text-align: center;
    text-decoration-line: underline;
    font-family: Anonymous;
 }
+
 .input-container {
    position: relative;
-   width: 100%; /* Largura do campo de entrada */
+   width: 100%;
+   /* Largura do campo de entrada */
    margin: 20px;
 }
 
 .input-label {
    position: absolute;
-   top: -26px; /* Posiciona a etiqueta acima do campo de entrada */
-   left: 30px; /* Move a etiqueta para o centro horizontal */
-   padding: 0 10px; /* Espaçamento interno para a etiqueta */
+   top: -26px;
+   /* Posiciona a etiqueta acima do campo de entrada */
+   left: 30px;
+   /* Move a etiqueta para o centro horizontal */
+   padding: 0 10px;
+   /* Espaçamento interno para a etiqueta */
    z-index: 4;
    color: #000;
    font-family: Anonymous;
    font-size: 20px;
    font-weight: 400;
 }
-.input-retangulo{
+
+.input-retangulo {
    position: absolute;
    height: 10px;
    background-color: #fff;
-   top: 0px; /* Posiciona a etiqueta acima do campo de entrada */
+   top: 0px;
+   /* Posiciona a etiqueta acima do campo de entrada */
    z-index: 3;
    width: 83px;
    left: 30px;
@@ -427,21 +443,26 @@ i.fa {
    width: 100%;
    padding: 10px;
    border-radius: 33px;
-   border: 1px solid #000; /* Estilo da borda do campo de entrada */
+   border: 1px solid #000;
+   /* Estilo da borda do campo de entrada */
 }
-.input-text-area{
+
+.input-text-area {
    width: 100%;
    height: 136.013px;
-   border: 1px solid #000; /* Estilo da borda do campo de entrada */
+   border: 1px solid #000;
+   /* Estilo da borda do campo de entrada */
    border-radius: 20px;
    padding: 20px;
 }
-textarea::placeholder{
+
+textarea::placeholder {
    color: #797979;
    font-family: Anonymous;
    font-size: 20px;
 }
-.submit-btn{
+
+.submit-btn {
    font-size: 25px;
    text-align: center;
    color: #000;
@@ -452,6 +473,7 @@ textarea::placeholder{
    border-radius: 20px;
    border: 1px solid #000;
 }
-.submit-btn:hover{
+
+.submit-btn:hover {
    background-color: #f7b111;
 }

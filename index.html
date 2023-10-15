@@ -14,21 +14,44 @@
 </head>
 
 <body>
-    <nav id="nav">
-        <img id="logo" src="img/logo.png" alt="logo Pelucio">
-        <div id="opcoes">
-            <div>Gallery</div>
-            <div>Who</div>
-            <div>Contact</div>
-            <div>Products</div>
-        </div>
-        <div id="navRedes">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-behance" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+    <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" id="logo" alt="logo Pelucio">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="opcoes">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Who</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+            </ul>
+            <div class="navbar-nav ms-auto" id="navRedes">
+                <a class="nav-link" href="https://x.com/pelucioartist?t=ZTyDfhqPzpc-CaB6gTnylQ&s=09">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" href="https://www.behance.net/pelucio">
+                    <i class="fa fa-behance" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link" href="https://instagram.com/peluciooo?igshid=OGQ5ZDc2ODk2ZA==">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </nav>
-    <div id="main">
+
+    <div id="main" class="container">
         <h1 id="resenhaECoisaSeria">
             Resenha é Coisa Séria
         </h1>
@@ -58,7 +81,7 @@
         </div>
         <div id="who">
             <div class="topicoWho" id="primeiroTexto">
-                <img src="img/tvLine.png" alt="desenho tv">
+                <img src="img/tvLine.png" alt="desenho tv" class="col-12">
                 <div id="firstPWho">
                     <h2 id="tituloWho">Hi, I'm Pedro!</h2>
                     <p class="pWho">Also known as Pelucio, a freelancer and illustrator from Brazil. My art is heavily
@@ -111,47 +134,52 @@
         </div>
     </div>
     <div id="footer" class="d-flex">
-        <div id="letsTalk">
-            <h3 id="tituloLetsTalk">LET’S TALK?</h3>
-            <p class="corpoLetsTalk text-white">I'm always excited to chat to talk about what I love doing.
-            </p>
-            <p class="corpoLetsTalk text-white">If you just want to know the new things I’ve on or support my work,
-                follow me on my social medias.</p>
-            <div class="footerIcones">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-behance" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+        <div class="row" style="margin: 0;">
+            <div id="letsTalk" class="p-5 col-xl-6 col-12">
+                <h3 id="tituloLetsTalk">LET’S TALK?</h3>
+                <p class="corpoLetsTalk text-white">I'm always excited to chat to talk about what I love doing.
+                </p>
+                <p class="corpoLetsTalk text-white">If you just want to know the new things I’ve on or support my
+                    work,
+                    follow me on my social medias.</p>
+                <div class="footerIcones d-flex flex-column flex-md-row justify-content-center flex-md-row align-items-center">
+                    <a href="https://x.com/pelucioartist?t=ZTyDfhqPzpc-CaB6gTnylQ&s=09" class=""><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.behance.net/pelucio" class=""><i class="fa fa-behance" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/peluciooo?igshid=OGQ5ZDc2ODk2ZA==" class=""><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div id="contato" class="p-5 col-xl-6 col-12">
+                <h3 id="tituloContato">CONTACT</h3>
+                <p class="corpoLetsTalk text-black text-center">Fill the fields here to send an easy message to</p>
+                <div class="d-flex justify-content-center">
+                    <a href="" class="email corpoLetsTalk">pelu.silvaaraujo@gmail.com</a>
+                </div>
+                <form class="d-flex justify-content-center flex-column align-items-center">
+                    <div class="input-container">
+                        <label for="name" class="input-label">name <span
+                                style="font-size: 30px;font-weight: 700;">*</span></label>
+                        <input type="text" id="name" class="input-field">
+                        <div class="input-retangulo"></div>
+                    </div>
+                    <div class="input-container">
+                        <label for="email" class="input-label">email <span
+                                style="font-size: 30px;font-weight: 700;">*</span></label>
+                        <input type="email" id="email" class="input-field">
+                        <div class="input-retangulo" style="width: 93px;"></div>
+                    </div>
+                    <div class="input-container ">
+                        <label for="mensagem" class="input-label">message <span
+                                style="font-size: 30px;font-weight: 700;">*</span></label>
+                        <textarea id="mensagem" placeholder="leave here your message ..."
+                            class="input-text-area"></textarea>
+                        <div class="input-retangulo" style="width: 112px;"></div>
+                    </div>
+                    <button type="button" class="submit-btn">SUBMIT</button>
             </div>
         </div>
-        <div id="contato">
-            <h3 id="tituloContato">CONTACT</h3>
-            <p class="corpoLetsTalk text-black text-center">Fill the fields here to send an easy message to</p>
-            <div class="d-flex justify-content-center">
-                <a href="" class="email corpoLetsTalk">pelu.silvaaraujo@gmail.com</a>
-            </div>
-            <form class="d-flex justify-content-center flex-column align-items-center">
-                <div class="input-container">
-                    <label for="name" class="input-label">name <span
-                            style="font-size: 30px;font-weight: 700;">*</span></label>
-                    <input type="text" id="name" class="input-field">
-                    <div class="input-retangulo"></div>
-                </div>
-                <div class="input-container">
-                    <label for="email" class="input-label">email <span
-                            style="font-size: 30px;font-weight: 700;">*</span></label>
-                    <input type="email" id="email" class="input-field">
-                    <div class="input-retangulo" style="width: 93px;"></div>
-                </div>
-                <div class="input-container ">
-                    <label for="mensagem" class="input-label">message <span
-                            style="font-size: 30px;font-weight: 700;">*</span></label>
-                    <textarea id="mensagem" placeholder="leave here your message ..."
-                        class="input-text-area"></textarea>
-                    <div class="input-retangulo" style="width: 112px;"></div>
-                </div>
-                <button type="button" class="submit-btn">SUBMIT</button>
-            </form>
-        </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

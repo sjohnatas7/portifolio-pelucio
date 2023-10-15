@@ -1,36 +1,108 @@
 /* MÉDIO */
 @media (max-width: 768px) {
-    #subTitulo{
+    #subTitulo {
         font-size: 1.3rem;
     }
 }
+
 /* PEQUENO */
 @media (max-width: 576px) {
-    html{
+    html {
         font-size: 9pt;
     }
-    body{
+
+    body {
         grid-template-rows: 13vw auto 30vw;
     }
-    #logo{
+
+    #logo {
         max-width: 20%;
     }
-    #opcoes div{
-    }
-    #opcoes div:nth-child(1), #opcoes div:nth-child(2), #opcoes div:nth-child(3){
-       margin-right: .5em;
-    }
-    #navRedes img{
-        max-width: 4.5vw; 
-     }
-    #navRedes :nth-child(1), #navRedes :nth-child(2){
+
+    #opcoes div:nth-child(1),
+    #opcoes div:nth-child(2),
+    #opcoes div:nth-child(3) {
         margin-right: .5em;
     }
-    #resenhaECoisaSeria{
+
+    #navRedes img {
+        max-width: 4.5vw;
+    }
+
+    #navRedes :nth-child(1),
+    #navRedes :nth-child(2) {
+        margin-right: .5em;
+    }
+
+    #resenhaECoisaSeria {
         margin-top: 1.8rem;
         margin-bottom: 1rem;
     }
-    .display-md-none{
+
+    .display-md-none {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+
+    #galeria {
+        /* quadrado: 384x365 // retangulo: 325x734 */
+        display: grid;
+        gap: .5rem;
+        grid-template-areas:
+           "img1 img2"
+           "img4 img2"
+           "img3 img5";
+     }
+
+
+    .topicoWho{
+        flex-direction: column;
+    }
+
+    #firstPWho {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+     }
+     
+     
+     
+     #primeiroTexto img {
+        width: 88%;
+        position: relative;
+        left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+     }
+     #segundoTexto{
+        flex-direction: column-reverse;
+     }
+     #segundoTexto p {
+        position: relative;
+        width: 100%;
+     }
+     
+     #segundoTexto img {
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+     }
+     
+     #terceiroTexto img {
+        width: 88%;
+        position: relative;
+        left: 0px;
+     }
+     
+     #terceiroTexto p {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+     }
+     .corpoLetsTalk {
+        font-size: 1.15rem;
+     }
 }
