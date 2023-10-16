@@ -16,8 +16,10 @@
     }
 
     #logo {
-        max-width: 20%;
+        width: 100%;
+        min-width: 80px;
     }
+
 
     #opcoes div:nth-child(1),
     #opcoes div:nth-child(2),
@@ -45,20 +47,45 @@
 }
 
 @media (max-width: 768px) {
+    nav.container {
+        width: 100vw;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+    #navRedes{
+        flex-direction: row;
+        justify-content: center;
+    }
+    #main {
+        width: 100%;
+    }
+    #opcoes{
+        position: relative;
+        transform: none;
+        left: 0;
+        align-items: center;
+    }
 
     #galeria {
         /* quadrado: 384x365 // retangulo: 325x734 */
         display: grid;
         gap: .5rem;
         grid-template-areas:
-           "img1 img2"
-           "img4 img2"
-           "img3 img5";
-     }
+            "img1 img2"
+            "img4 img2"
+            "img3 img5";
+    }
 
+    #who {
+        width: 100%;
+    }
 
-    .topicoWho{
+    .topicoWho {
         flex-direction: column;
+    }
+
+    #tituloWho {
+        text-align: center;
     }
 
     #firstPWho {
@@ -66,43 +93,61 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-     }
-     
-     
-     
-     #primeiroTexto img {
+    }
+
+
+
+    #primeiroTexto img {
         width: 88%;
         position: relative;
         left: 0px;
-        margin-left: auto;
-        margin-right: auto;
-     }
-     #segundoTexto{
+        margin: 20px auto;
+    }
+
+    #segundoTexto {
         flex-direction: column-reverse;
-     }
-     #segundoTexto p {
+    }
+
+    #segundoTexto p {
         position: relative;
         width: 100%;
-     }
-     
-     #segundoTexto img {
+    }
+
+    #segundoTexto img {
         width: 88%;
-        margin-left: auto;
-        margin-right: auto;
-     }
-     
-     #terceiroTexto img {
+        margin: 20px auto;
+
+    }
+
+    #terceiroTexto img {
         width: 88%;
         position: relative;
         left: 0px;
-     }
-     
-     #terceiroTexto p {
+        margin: 20px auto;
+
+    }
+
+    #terceiroTexto p {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-     }
-     .corpoLetsTalk {
+    }
+
+    #galeriaProdutos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+
+        grid-template-areas:
+            "galeriaImg1 galeriaImg2"
+            "galeriaImg4 galeriaImg5"
+            "galeriaImg6 galeriaImg3";
+    }
+
+    .corpoLetsTalk {
         font-size: 1.15rem;
-     }
+    }
+
+    .footerIcones i.fa {
+        font-size: 30px;
+    }
 }

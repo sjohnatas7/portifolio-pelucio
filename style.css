@@ -41,7 +41,12 @@ body {
 p {
    font-family: Anonymous;
 }
-
+nav.container{
+   width: 85vw;
+}
+nav>a{
+   width: 20%;
+}
 #nav {
    grid-area: nav;
    display: flex;
@@ -226,7 +231,7 @@ p {
 #who {
    margin-top: 4.5rem;
    width: 90%;
-   margin-bottom: 100px;
+   margin-bottom: 4.5rem;
 }
 
 #tituloWho {
@@ -319,13 +324,37 @@ p {
 
 #galeriaProdutos {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-areas:
+   "galeriaImg1 galeriaImg2 galeriaImg3"
+   "galeriaImg4 galeriaImg5 galeriaImg6";
    gap: 20px;
    padding: 25px;
    margin-bottom: 80px;
 }
 
+#galeriaImagem1 {
+   grid-area: galeriaImg1;
+}
 
+#galeriaImagem2 {
+   grid-area: galeriaImg2;
+}
+
+#galeriaImagem3 {
+   grid-area: galeriaImg3;
+}
+
+#galeriaImagem4 {
+   grid-area: galeriaImg4;
+}
+
+#galeriaImagem5 {
+   grid-area: galeriaImg5;
+}
+
+#galeriaImagem6 {
+   grid-area: galeriaImg6;
+}
 /* ////////////////////////////////////////// */
 #footer {
    width: 100%;
@@ -476,4 +505,28 @@ textarea::placeholder {
 
 .submit-btn:hover {
    background-color: #f7b111;
+}
+/* Estilo para o lightbox */
+.lightbox {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 999;
+}
+
+.lightbox img {
+   max-width: 80%;
+   max-height: 80%;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilize o cursor para indicar que a imagem é clicável */
+.fotoGaleria {
+   cursor: pointer;
 }
