@@ -71,7 +71,7 @@
         display: grid;
         gap: .5rem;
         grid-template-areas:
-            "img1 img2"
+            "img1 img6"
             "img4 img2"
             "img3 img5";
     }
@@ -88,22 +88,25 @@
         text-align: center;
     }
 
-    #firstPWho {
-        display: flex;
-        flex-direction: column;
+
+    #primeiroTexto h2, #primeiroTexto p{
         margin-left: auto;
         margin-right: auto;
     }
-
-
+    #primeiroTexto h2{
+        order: 1;
+    }
 
     #primeiroTexto img {
         width: 88%;
         position: relative;
         left: 0px;
         margin: 20px auto;
+        order: 2;
     }
-
+    #primeiroTexto p{
+        order: 3;
+    }
     #segundoTexto {
         flex-direction: column-reverse;
     }
