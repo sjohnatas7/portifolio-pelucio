@@ -157,11 +157,9 @@
 
     .nav-left {
         left: calc(var(--bs-gutter-x) * .5 + 25px);
-        transform: none;
     }
 
     .nav-right {
-        transform: none;
         right: calc(var(--bs-gutter-x) * .5 + 25px);
     }
 

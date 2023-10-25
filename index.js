@@ -24,13 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-    const carrosels = document.querySelector('.carosel-slide img');
+    const carrosels = document.querySelectorAll('.carosel-slide img.fotoGaleria');
     const left = document.querySelector('.nav-left')
     const right = document.querySelector('.nav-right')
+    console.log(carrosels)
     right.addEventListener('click', ()=>{
-        const temp = carrosels[1].src
+        const temp = carrosels[2].src
+        carrosels[2].src = carrosels[1].src
         carrosels[1].src = carrosels[0].src
         carrosels[0].src = temp
+    })
+
+    left.addEventListener('click', ()=>{
+        const temp = carrosels[2].src
+        carrosels[2].src = carrosels[0].src
+        carrosels[0].src = carrosels[1].src
+        carrosels[1].src = temp
     })
     console.log(center);
 }); 
