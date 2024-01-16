@@ -181,27 +181,28 @@
                 <div class="d-flex justify-content-center">
                     <a href="" class="email corpoLetsTalk">pelu.silvaaraujo@gmail.com</a>
                 </div>
-                <form class="d-flex justify-content-center flex-column align-items-center">
+                <form class="d-flex justify-content-center flex-column align-items-center" id="my-form" method="post" action="https://formspree.io/f/xnqenovo">
                     <div class="input-container">
                         <label for="name" class="input-label">name <span
                                 style="font-size: 30px;font-weight: 700;">*</span></label>
-                        <input type="text" id="name" class="input-field">
+                        <input type="text" id="name" name="name" required class="input-field">
                         <div class="input-retangulo"></div>
                     </div>
                     <div class="input-container">
                         <label for="email" class="input-label">email <span
                                 style="font-size: 30px;font-weight: 700;">*</span></label>
-                        <input type="email" id="email" class="input-field">
+                        <input type="email" id="email" name="email" required class="input-field">
                         <div class="input-retangulo" style="width: 93px;"></div>
                     </div>
                     <div class="input-container ">
                         <label for="mensagem" class="input-label">message <span
                                 style="font-size: 30px;font-weight: 700;">*</span></label>
-                        <textarea id="mensagem" placeholder="leave here your message ..."
+                        <textarea id="mensagem" required name="message" placeholder="leave here your message ..."
                             class="input-text-area"></textarea>
                         <div class="input-retangulo" style="width: 112px;"></div>
                     </div>
-                    <button type="button" class="submit-btn">SUBMIT</button>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                    <p id="my-form-status"></p>
             </div>
         </div>
     </div>
