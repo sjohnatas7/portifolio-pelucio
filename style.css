@@ -157,9 +157,7 @@ nav>a {
    /* quadrado: 384x365 // retangulo: 325x734 */
    display: grid;
    gap: .5rem;
-   grid-template-areas:
-      "img1 img6 img3"
-      "img4 img2 img5";
+   grid-template-columns: repeat(4, 1fr); 
 }
 
 
@@ -204,7 +202,7 @@ nav>a {
 }
 
 
-#galeria #tvMatadouro {
+/* #galeria #tvMatadouro {
    grid-area: img1;
 }
 
@@ -214,20 +212,20 @@ nav>a {
 
 #galeria #fogueteMatadouro {
    grid-area: img3;
-}
+} */
 
 #galeria #porcoTusca {
-   grid-area: img4;
+   /* grid-area: img4; */
    object-fit: cover;
 }
-
+/* 
 #galeria #baseado {
    grid-area: img5;
 }
 
 #fogo {
    grid-area: img6;
-}
+} */
 
 /* ////////////////////////////////////////// */
 #who {
