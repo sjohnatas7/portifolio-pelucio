@@ -201,32 +201,6 @@ nav>a {
    height: 60px;
 }
 
-
-/* #galeria #tvMatadouro {
-   grid-area: img1;
-}
-
-#galeria #quimica {
-   grid-area: img2;
-}
-
-#galeria #fogueteMatadouro {
-   grid-area: img3;
-} */
-
-#galeria #porcoTusca {
-   /* grid-area: img4; */
-   object-fit: cover;
-}
-/* 
-#galeria #baseado {
-   grid-area: img5;
-}
-
-#fogo {
-   grid-area: img6;
-} */
-
 /* ////////////////////////////////////////// */
 #who {
    margin-top: 4.5rem;

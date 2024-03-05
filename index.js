@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const imagens = document.querySelectorAll('.imagemQuadrada');
     imagens.forEach(imagem => {
-      const fotoGaleria = imagem.querySelector('.fotoGaleria');
+      let fotoGaleria = imagem.querySelector('.fotoGaleria');
 
       imagem.addEventListener('click', function () {
           // Cria uma div para a imagem expandida
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrosels = document.querySelectorAll('.carosel-slide img.fotoGaleria');
     const left = document.querySelector('.nav-left');
     const right = document.querySelector('.nav-right');
-    // console.log(carrosels)
+
     right.addEventListener('click', ()=>{
         const temp = carrosels[2].src
         carrosels[2].src = carrosels[1].src
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         carrosels[2].src = carrosels[0].src
         carrosels[0].src = carrosels[1].src
         carrosels[1].src = temp
-    })
+    });
     var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
