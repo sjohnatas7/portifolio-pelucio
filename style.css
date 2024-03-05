@@ -160,7 +160,6 @@ nav>a {
    grid-template-columns: repeat(4, 1fr); 
 }
 
-
 .galeria .fotoGaleria {
    max-width: inherit;
    height: inherit;
@@ -291,19 +290,7 @@ nav>a {
    margin-left: calc(2.5rem + 33%);
    margin-right: 50px;
 }
-
-
-/* 
-#who img{
-   background-color: #f00;
-} */
 /*-------------Products-------------------*/
-
-#galeriaProdutos {
-   margin-bottom: 80px;
-   margin-top: 30px;
-   padding:  25px;
-}
 
 #tituloProdutos {
    font-family: ChelaOne;
@@ -313,13 +300,15 @@ nav>a {
    margin-bottom: 30px;
 }
 
-.carosel {
+#galeriaProdutos {
+   background-color: yellowgreen;
+   margin: 3rem 0 4rem 0;
+   padding:  25px;
    display: flex;
    justify-content: center;
    /* Largura do carrossel */
    overflow-x: hidden;
    height: 300px;
-   margin: 0 auto;
 }
 
 .carosel-slide {
@@ -332,7 +321,7 @@ nav>a {
    backdrop-filter: blur(2px);
 }
 
-.center {
+.centerGaleriaProducts {
    transform: scale(1.2);
    z-index: 2;
    position: relative;
@@ -346,14 +335,14 @@ nav>a {
    object-fit: cover;
 }
 
-.carousel-slide:not(.center) {
+.carousel-slide:not(.centerGaleriaProducts) {
    opacity: 0.5;
    transform: scale(0.8);
    z-index: 1;
 }
 
-.galeria .nav-left,
-.galeria .nav-right {
+#galeriaProdutos.galeria .nav-left,
+#galeriaProdutos .nav-right {
    position: absolute;
    top: 50%;
    transform: translateY(-50%);

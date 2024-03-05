@@ -23,23 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       });
 });
-    const carrosels = document.querySelectorAll('.carosel-slide img.fotoGaleria');
-    const left = document.querySelector('.nav-left');
-    const right = document.querySelector('.nav-right');
+    var carrosels = document.querySelectorAll('.carosel-slide img.fotoGaleria');
+    var left = document.querySelector('.nav-left');
+    var right = document.querySelector('.nav-right');
 
-    right.addEventListener('click', ()=>{
-        const temp = carrosels[2].src
-        carrosels[2].src = carrosels[1].src
-        carrosels[1].src = carrosels[0].src
-        carrosels[0].src = temp
-    })
+    
+    
 
-    left.addEventListener('click', ()=>{
-        const temp = carrosels[2].src
-        carrosels[2].src = carrosels[0].src
-        carrosels[0].src = carrosels[1].src
-        carrosels[1].src = temp
-    });
+
     var form = document.getElementById("my-form");
     
     async function handleSubmit(event) {
