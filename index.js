@@ -1,33 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtém todas as imagens da galeria
     const imagens = document.querySelectorAll('.imagemQuadrada');
-    console.log("JS ATIVADO")
     imagens.forEach(imagem => {
-        imagem.addEventListener('click', function () {
-            // Cria uma div para a imagem expandida
-            const lightbox = document.createElement('div');
-            lightbox.className = 'lightbox';
-            // Cria a imagem expandida
-            const imagemExpandida = document.createElement('img');
+      const fotoGaleria = imagem.querySelector('.fotoGaleria');
 
-            const img = imagem.firstChild
-            imagemExpandida.src = img.src;
+      imagem.addEventListener('click', function () {
+          // Cria uma div para a imagem expandida
+          const lightbox = document.createElement('div');
+          lightbox.className = 'lightbox';
+          // Cria a imagem expandida
+          const imagemExpandida = document.createElement('img');
 
-            // Adiciona a imagem expandida à div do lightbox
-            lightbox.appendChild(imagemExpandida);
+          imagemExpandida.src = fotoGaleria.src;
 
-            // Adiciona o lightbox ao corpo do documento
-            document.body.appendChild(lightbox);
-            // Fecha o lightbox quando clicado
-            lightbox.addEventListener('click', function () {
-                document.body.removeChild(lightbox);
-            });
-        });
-    });
+          // Adiciona a imagem expandida à div do lightbox
+          lightbox.appendChild(imagemExpandida);
+
+          // Adiciona o lightbox ao corpo do documento
+          document.body.appendChild(lightbox);
+          // Fecha o lightbox quando clicado
+          lightbox.addEventListener('click', function () {
+              document.body.removeChild(lightbox);
+          });
+      });
+});
     const carrosels = document.querySelectorAll('.carosel-slide img.fotoGaleria');
-    const left = document.querySelector('.nav-left')
-    const right = document.querySelector('.nav-right')
-    console.log(carrosels)
+    const left = document.querySelector('.nav-left');
+    const right = document.querySelector('.nav-right');
+    // console.log(carrosels)
     right.addEventListener('click', ()=>{
         const temp = carrosels[2].src
         carrosels[2].src = carrosels[1].src
