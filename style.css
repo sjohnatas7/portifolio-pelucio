@@ -301,17 +301,16 @@ nav>a {
 }
 
 #galeriaProdutos {
-   background-color: yellowgreen;
+   position: relative;
    margin: 3rem 0 4rem 0;
    padding:  25px;
    display: flex;
    justify-content: center;
    /* Largura do carrossel */
-   overflow-x: hidden;
    height: 300px;
 }
 
-.carosel-slide {
+.carousel-slide {
    flex: 1;
    transition: transform 0.5s;
    display: flex;
@@ -334,38 +333,35 @@ nav>a {
    height: auto;
    object-fit: cover;
 }
-
 .carousel-slide:not(.centerGaleriaProducts) {
    opacity: 0.5;
-   transform: scale(0.8);
    z-index: 1;
 }
-
-#galeriaProdutos.galeria .nav-left,
-#galeriaProdutos .nav-right {
+#navProdutos {
    position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   background: white;
-   padding: 10px;
-   border-radius: 50%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transform: scale(1.2);
+   z-index: 3;
+   background-color: transparent;
+}
+#navProdutos .nav-left, #navProdutos .nav-right {
+   width: 1rem;
+   height: 1rem;
+   border-radius: 30px;
    cursor: pointer;
-   font-size: 20px;
-   z-index: 1;
-   height: auto;
 }
-
-.nav-left {
-   left: 10px;
+#navProdutos .nav-left {
+   background-color: #fff;
 }
-
-.nav-right {
-   right: 10px;
+#navProdutos .nav-right {
+   background-color: #fff;
 }
 
 .nav-left:hover,
 .nav-right:hover {
-   transform: translateY(-50%) scale(1.4);
+   transform: scale(1.4);
 
 }
 
